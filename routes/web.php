@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+/*
+GET: Recuperan datos
+POST: Envia datos al server o BD
+PUT: Reemplaza datos en el server o BD
+*/
+
 Route::post('contacts/create', 'ContactController@store')->name('contacts.store');
 Route::get('contacts/', 'ContactController@index');
 Route::get('contacts/edit/{contact_id}', 'ContactController@edit')->name('contacts.edit');

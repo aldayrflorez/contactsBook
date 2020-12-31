@@ -43,6 +43,8 @@ class ContactController extends Controller
         $request->validate([
             'name'=>'required',
             'last_name'=>'required',
+            'phone'=>'required',
+            'address'=>'required',
         ]);
 
         $contact = new Contact([
@@ -93,6 +95,8 @@ class ContactController extends Controller
         $request->validate([
             'name'=>'required',
             'last_name'=>'required',
+            'phone'=>'required',
+            'address'=>'required',
         ]);
 
         $contact = Contact::find($id);
